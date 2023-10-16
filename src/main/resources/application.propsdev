@@ -1,0 +1,11 @@
+%dev.quarkus.datasource.db-kind=postgresql
+%dev.quarkus.datasource.username=postgres
+%dev.quarkus.datasource.password=pgpass
+%dev.quarkus.datasource.jdbc.url=jdbc:postgresql://localhost:5432/hibernate_db
+%dev.quarkus.datasource.jdbc.init-size=0
+%dev.quarkus.datasource.jdbc.max-size=8
+%dev.quarkus.datasource.jdbc.min-size=2
+%dev.quarkus.hibernate-orm.database.generation=update
+
+quarkus.hibernate-orm.log.sql=true
+quarkus.hibernate-orm.sql-load-script=import.sql
