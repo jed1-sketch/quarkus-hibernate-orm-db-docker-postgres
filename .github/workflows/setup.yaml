@@ -126,7 +126,6 @@ jobs:
           aws s3 rb s3://"${{ env.TERRAFORM_BACKEND_S3_BUCKET_NAME }}-${{ env.AWS_REGION }}-${{ secrets.YOUR_AWS_ACCOUNT_ID}}" --force
           echo "Finished Deleting s3 bucket"    
           
-          
 
   setupPR:
     if: github.event_name == 'pull_request' && github.base_ref == 'setup'
