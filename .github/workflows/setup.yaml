@@ -101,7 +101,7 @@ jobs:
           fi
           echo "Finished creating Dynamodb table ${{ env.TERRAFORM_BACKEND_STATE_FILE_LOCK_DYANAMODB_TABLE }}"
 
-#deletion occurs here
+      #deletion occurs here
 
       - id: "DeleteDynamoDB"
         if: env.ACTION == 'destroy'
@@ -126,7 +126,8 @@ jobs:
           done  
           aws s3 rb s3://"${{ env.TERRAFORM_BACKEND_S3_BUCKET_NAME }}-${{ env.AWS_REGION }}-${{ secrets.YOUR_AWS_ACCOUNT_ID}}" --force
           echo "Finished Deleting s3 bucket"    
-          
+  
+  
 
   setupPR:
     if: github.event_name == 'pull_request' && github.base_ref == 'setup'
