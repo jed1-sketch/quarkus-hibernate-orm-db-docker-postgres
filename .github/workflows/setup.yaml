@@ -61,7 +61,7 @@ jobs:
           }
           ''' >> setup/terraform1/providers.tf
 
-      - id: Build with quarkus
+      - id: BuildWithQuarkus
         name: Build with quarkus
         run: ls
         shell: bash
