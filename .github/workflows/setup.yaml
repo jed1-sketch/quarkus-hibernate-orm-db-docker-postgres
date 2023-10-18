@@ -9,6 +9,7 @@ on:
 
 env:
 
+
   # Define environment
   ACTION: "destroy"
   S3_VERSION: "Enabled"
