@@ -2,7 +2,9 @@ name: SonarCloud
 on:
   push:
     branches:
-      - master
+      - main
+    paths:
+      - fruits-inventory/**
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
@@ -31,8 +33,6 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
       - name: Build and analyze
-        paths:
-          - fruits-inventory/**
         env:
           MY_GITHUB_PASSWORD: ${{ secrets.MY_GITHUB_PASSWORD }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
